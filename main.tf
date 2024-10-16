@@ -73,7 +73,7 @@ resource "google_compute_region_backend_service" "default" {
       group       = backend.value.group
 
       balancing_mode               = lookup(backend.value, "balancing_mode")
-      capacity_scaler              = lookup(backend.value, "capacity_scaler")
+ #     capacity_scaler              = lookup(backend.value, "capacity_scaler")
       max_connections              = lookup(backend.value, "max_connections")
       max_connections_per_instance = lookup(backend.value, "max_connections_per_instance")
       max_connections_per_endpoint = lookup(backend.value, "max_connections_per_endpoint")
