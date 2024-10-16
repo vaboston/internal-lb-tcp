@@ -62,7 +62,7 @@ resource "google_compute_region_backend_service" "default" {
   project               = var.project
   region                = var.region
   protocol              = local.ip_protocol
-  port_name             = var.backend.backend_type == "INSTANCE_GROUP" ? var.backend.port_name : null
+  #port_name             = var.backend.backend_type == "INSTANCE_GROUP" ? var.backend.port_name : null
   load_balancing_scheme = var.load_balancing_scheme
   timeout_sec           = 10
   health_checks         = [google_compute_region_health_check.default.id]
