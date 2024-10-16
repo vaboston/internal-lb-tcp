@@ -24,6 +24,10 @@ variable "ip_protocol" {
   description = "Name of the load balancer and prefix for supporting resources."
 }
 
+variable "subnetwork" {
+  type        = string
+  description = "Name of the load balancer and prefix for supporting resources."
+}
 variable "load_balancing_scheme" {
   type        = string
   description = "Name of the load balancer and prefix for supporting resources."

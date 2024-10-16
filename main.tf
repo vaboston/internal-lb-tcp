@@ -42,6 +42,7 @@ resource "google_compute_forwarding_rule" "default" {
   port_range            = var.port_front_end
   region                = var.region
   network               = var.network
+  subnetwork            = var.subnetwork
   target                = google_compute_region_target_tcp_proxy.default.id
   ip_address            = var.address
   depends_on            = [google_compute_subnetwork.proxy_only_subnet]
